@@ -1,0 +1,38 @@
+window.borderWidth: 4
+window.borderColor: DarkGreen2
+window.unfocus.borderColor: orange1
+
+# Apply to window.label, window.title and window.button
+window.*.focus: raised gradient horizontal
+window.*.focus.color: khaki4
+window.*.focus.colorTo: white
+window.*.focus.textColor: DarkOliveGreen1
+window.*.focus.font: korataki-10
+window.*.unfocus: sunken gradient horizontal
+window.*.unfocus.color: white
+window.*.unfocus.colorTo: orange1
+window.*.unfocus.textColor: black
+window.*.unfocus.font: korataki-10
+
+# Then override window.button
+window.button.focus: bevel2
+window.button.focus.color: white
+window.button.focus.picColor: black
+window.button.unfocus: bevel1
+window.button.unfocus.color: orange2
+window.button.unfocus.picColor: black
+window.button.pressed: bevel2
+window.button.pressed.color: green3
+window.button.pressed.picColor: white
+
+
+
+window.handleWidth: 0
+
+window.justify: Left
+window.roundCorners: TopRight TopLeft BottomRight BottomLeft
+
+menu.hilite: sunk gradient vertical
+menu.hilite.color: orange
+menu.hilite.colorTo: white
+menu.hilite.textColor: black

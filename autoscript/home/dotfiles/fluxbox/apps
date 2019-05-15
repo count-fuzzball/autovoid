@@ -1,0 +1,18 @@
+[app] (name=fbrun)
+  [Position]	(WINCENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=thingmenu)
+  [Position]	(TopLeft)	{0 0}
+  [Layer]	{12}
+  [Deco]	{NONE}
+  [Sticky]	{yes}
+  [FocusNewWindow]	{No}
+  [Hidden]	{yes}
+[end]
+
+[app] (name=conky)
+ [Layer]	{12}
+ [FocusNewWindow] {no}
+ [Hidden]	{yes}
+[end]
