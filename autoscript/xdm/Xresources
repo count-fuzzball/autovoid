@@ -13,7 +13,7 @@ xlogin*login.translations: #override \
 	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
 	<Key>Return: set-session-argument() finish-field()
 
-xlogin*greeting: Connected to CLIENTHOST
+xlogin*greeting: Welcome to Void Linux
 !xlogin*namePrompt: \040\040\040\040\040\040\040Login:
 xlogin*namePrompt: Login:
 xlogin*passwdPrompt: Password:
@@ -32,7 +32,7 @@ xlogin*failFace: 	Helvetica-18:bold
 xlogin*borderWidth: 0
 xlogin*frameWidth: 0
 xlogin*innerFramesWidth: 0
-xlogin*shdColor: black
+xlogin*shdColor: white
 xlogin*hiColor: black
 xlogin*background: black
 xlogin*inpColor: black
@@ -54,9 +54,9 @@ xlogin*hiColor: black
 #else
 !xlogin*logoFileName: /usr/lib/X11/xdm/pixmaps/xorg-bw.xpm
 #endif
-xlogin*useShape: false
+xlogin*useShape: yes
 xlogin*logoPadding: 0
-xlogin*geometry: +100+100
+xlogin*geometry: +300+0
 
 XConsole.text.geometry:	480x130
 XConsole.verbose:	true

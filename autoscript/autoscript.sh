@@ -17,7 +17,7 @@ sudo ln -s /etc/sv/bluetoothd /var/service/
 #Stop the console terminal from appearing when xdm is started
 cat <<EOF > ./Xsetup_0tmp
 #!/bin/bash
-xrootconsole -fg orange --topdown -c 2 --wrap -geometry 200x150+30+20 /var/log/dmesg.log &
+dmesg | xrootconsole -fg orange --wrap -geometry 450x28+0+320 &
 EOF
 sudo mv ./Xsetup_0tmp /usr/lib/X11/xdm/Xsetup_0
 
