@@ -19,7 +19,7 @@
       [exec] (Lock screen) (slock)
       [exec] (Terminal) {cool-retro-term}
       [exec] (firefox) {firefox}
-      [exec] (Links-X11) (links -g)
+      [exec] (Links-X11) {links -g}
       [exec] (Rox-Filer) {rox}
       [exec] (Xarchiver) {xarchiver}
       [exec] (Thinglaunch) {thinglaunch}
