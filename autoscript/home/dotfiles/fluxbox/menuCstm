@@ -23,7 +23,7 @@
       [exec] (Rox-Filer) {rox}
       [exec] (Xarchiver) {xarchiver}
       [exec] (Thinglaunch) {thinglaunch}
-      [exec] (Blueman) {blueman}
+      [exec] (Blueman) {blueman-manager}
       [exec] (Leafpad) {leafpad}
       [exec] (Viewnior) {viewnior}
       [exec] (Xpdf) (xpdf)
