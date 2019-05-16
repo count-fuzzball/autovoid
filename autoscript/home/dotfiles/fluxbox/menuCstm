@@ -17,7 +17,15 @@
 [begin] (Fluxbox-1.3.7)
 [encoding] {UTF-8}
       [exec] (Terminal) {cool-retro-term}
-      [exec] (firefox) {}
+      [exec] (firefox) {firefox}
+      [exec] (Links-X11) (links -g)
+      [exec] (Rox-Filer) {rox}
+      [exec] (Xarchiver) {xarchiver}
+      [exec] (Thinglaunch) {thinglaunch}
+      [exec] (Blueman) {blueman}
+      [exec] (Leafpad) {leafpad}
+      [exec] (Viewnior) (viewnior)
+      [exec] (Xpdf) (xpdf)
 [submenu] (Fluxbox menu)
       [config] (Configure)
 [submenu] (System Styles) {Choose a style...}
