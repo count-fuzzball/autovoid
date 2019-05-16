@@ -71,6 +71,6 @@ session.styleOverlay:	/home/void/.fluxbox/overlay
 session.menuSearch:	itemstart
 session.forcePseudoTransparency:	true
 session.appsFile:	/home/void/.fluxbox/apps
-session.menuFile:	~/.fluxbox/menu
+session.menuFile:	~/.fluxbox/menuC
 session.slitlistFile:	/home/void/.fluxbox/slitlist
 session.colorsPerChannel:	4
