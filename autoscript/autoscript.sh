@@ -4,7 +4,7 @@ sudo xbps-install -Su
 
 sudo xbps-install $(cat ./packages_list)
 
-sudo usermod -a -G bluetooth void
+sudo usermod -a -G bluetooth $USER
 
 sudo rm /var/service/sshd
 sudo ln -s /etc/sv/dbus /var/service/
