@@ -15,11 +15,19 @@ sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
 
 #Stop the console terminal from appearing when xdm is started
-#Todo: Move to LightDM at some point.
 cat <<EOF > ./Xsetup_0tmp
 #!/bin/bash
+xrootconsole -fg orange --topdown -c 2 --wrap -geometry 200x150+30+20 /var/log/dmesg.log &
 EOF
 sudo mv ./Xsetup_0tmp /usr/lib/X11/xdm/Xsetup_0
+
+cat <<EOF > ./GiveConsoletmp
+#!/bin/bash
+killall xrootconsole
+chown $USER /dev/console
+EOF
+sudo mv ./GiveConsoletmp /usr/lib/X11/xdm/GiveConsole
+
 
 #Create the script to switch the bluetooth adapter on when we boot up and set it to just run once.
 sudo mkdir /etc/sv/BTpwr
@@ -49,6 +57,7 @@ cp home/dotfiles/bash_profile /home/$USER/.bash_profile
 cp home/dotfiles/bashrc /home/$USER/.bashrc
 cp home/dotfiles/gtkrc-2.0 /home/$USER/.gtkrc-2.0
 cp home/dotfiles/xsession /home/$USER/.xsession
+sudo cp xdm/Xresources /etc/X11/xdm/
 
 #Start xdm
 sudo ln -s /etc/sv/xdm /var/service/
