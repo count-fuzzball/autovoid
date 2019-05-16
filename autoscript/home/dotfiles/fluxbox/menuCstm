@@ -25,7 +25,7 @@
       [exec] (Thinglaunch) {thinglaunch}
       [exec] (Blueman) {blueman}
       [exec] (Leafpad) {leafpad}
-      [exec] (Viewnior) (viewnior)
+      [exec] (Viewnior) {viewnior}
       [exec] (Xpdf) (xpdf)
 [submenu] (Fluxbox menu)
       [config] (Configure)
