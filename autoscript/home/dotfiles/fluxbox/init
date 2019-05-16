@@ -30,7 +30,7 @@ session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.widthPercent:	100
 session.screen0.window.focus.alpha:	255
 session.screen0.window.unfocus.alpha:	255
-session.screen0.menu.alpha:	150
+session.screen0.menu.alpha:	170
 session.screen0.maxDisableResize:	false
 session.screen0.opaqueMove:	true
 session.screen0.focusNewWindows:	true
