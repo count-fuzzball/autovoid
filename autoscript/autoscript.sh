@@ -10,6 +10,10 @@ sudo rm /var/service/sshd
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
 
+cat <<EOF > ./Xsetup_0tmp
+#!/bin/bash
+EOF
+sudo mv ./Xsetup_0tmp /usr/lib/X11/xdm/Xsetup_0
 
 sudo mkdir /etc/sv/BTpwr
 cat <<EOF > ./pwrrun 
@@ -31,6 +35,7 @@ mkdir /home/$USER/.fluxbox
 cp -r home/dotfiles/fluxbox/* /home/$USER/.fluxbox/
 mkdir /home/$USER/.fonts
 cp -r home/dotfiles/fonts/* /home/$USER/.fonts/
+
 
 cp home/dotfiles/bash_profile /home/$USER/.bash_profile
 cp home/dotfiles/bashrc /home/$USER/.bashrc
