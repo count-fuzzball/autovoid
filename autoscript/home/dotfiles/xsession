@@ -1,21 +1,28 @@
-mkfontscale /home/void/.fonts
-mkfontdir /home/void/.fonts
-fc-cache -f -v 
-xset +fp /home/void/.fonts
-xset fp rehash
+
+if [ -e /home/$USER/.fontsupd ]; then
+ echo  ; 
+ else
+  mkfontscale /home/void/.fonts
+  mkfontdir /home/void/.fonts
+  fc-cache -f -v 
+  xset +fp /home/void/.fonts
+  xset fp rehash
+  touch /home/$USER/.fontsupd
+
+fi
 
 #loadkeys /usr/share/kbd/keymaps/i386/qwerty/uk.map.gz &
 #tint2 -c /home/void/conkyconfigs/tint2_taskbar &
 tint2 &
-hsetroot -fill /home/void/Mass\ Effect\ Wallpapers/Image\ 26.jpg
+hsetroot -fill /home/$USER/autovoid/autoscript/wallpapers/Mass\ Effect\ Wallpapers/Image\ 26.jpg
 compton --config /home/void/conkyconfigs/compton.conf  &
 setxkbmap -layout ie &
 #( sleep 3; thingmenu -s -x -ws 2 -hs 1 Xterm xterm filer "rox ~" "FB Msgs" pidgin; ) &
-conky -c /home/void/conkyconfigs/conkycpu.conf &
+conky -c /home/$USER/conkyconfigs/conkycpu.conf &
 conky -c /home/void/conkyconfigs/conkynet.conf &
 conky -c /home/void/conkyconfigs/conkytime.conf &
 conky -c /home/void/conkyconfigs/conkysys.conf &
+#xrandr -s 1280x1024
 #xrandr -s 1280x720
-xrandr -s 1280x720
 #cool-retro-term -T "Terminal-1" &
 fluxbox
