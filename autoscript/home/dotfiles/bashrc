@@ -9,5 +9,5 @@ export LC_LANGUAGE=en_IE.utf8
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-
+#PS1='[\u@\h \W]\$ '
+export PS1="[\A]{\w} \l\n[\u:\h]-> \[$(tput sgr0)\]"
