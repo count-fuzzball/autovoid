@@ -4,6 +4,7 @@ blueman
 gtk+3
 broadcom-bt-firmware-12.0.1.1011_1
 linux-firmware-20181218_1
+linux5.1
 
 xorg
 xdm
@@ -23,6 +24,7 @@ tint2
 dconf
 xrootconsole
 nano
+wpa_gui
 
 rox
 xarchiver
