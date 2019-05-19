@@ -18,13 +18,14 @@ sudo ln -s /etc/sv/bluetoothd /var/service/
 cat <<EOF > ./Xsetup_0tmp
 #!/bin/bash
 dmesg | xrootconsole -fg orange --wrap -geometry 450x28+0+320 &
-thingmenu -x Shutdown /sbin/shutdown Reboot /sbin/reboot
+thingmenu -x Shutdown /sbin/shutdown Reboot /sbin/reboot &
 EOF
 sudo mv ./Xsetup_0tmp /usr/lib/X11/xdm/Xsetup_0
 
 cat <<EOF > ./GiveConsoletmp
 #!/bin/bash
 killall xrootconsole
+killall thingmenu
 chown $USER /dev/console
 EOF
 sudo mv ./GiveConsoletmp /usr/lib/X11/xdm/GiveConsole
