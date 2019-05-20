@@ -68,6 +68,8 @@ Mod1 F2 :Exec fbrun
 176 :Exec amixer sset Master,0 1+
 174 :Exec amixer sset Master,0 1-
 160 :Exec amixer sset Master,0 toggle
+XF86MonBrightnessUp :Exec xbacklight +20
+XF86MonBrightnessUp :Exec xbacklight -20
 
 # current window commands
 Mod1 F4 :Close

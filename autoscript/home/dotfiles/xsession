@@ -12,7 +12,6 @@ if [ -e /home/$USER/.fontsupd ]; then
 fi
 
 #loadkeys /usr/share/kbd/keymaps/i386/qwerty/uk.map.gz &
-#tint2 -c /home/void/conkyconfigs/tint2_taskbar &
 
 #Below line is for dual displays
 #xrandr --output eDP1 --mode 1280x1024 --output HDMI2 --mode 1280x1024
@@ -23,8 +22,7 @@ compton --config /home/$USER/conkyconfigs/compton.conf  &
 setxkbmap -layout ie &
 #( sleep 3; thingmenu -s -x -ws 2 -hs 1 Xterm xterm filer "rox ~" "FB Msgs" pidgin; ) &
 conky -c /home/$USER/conkyconfigs/conkycpu.conf &
-conky -c /home/$USER/conkyconfigs/conkynet.conf &
+#conky -c /home/$USER/conkyconfigs/conkynet.conf &
 conky -c /home/$USER/conkyconfigs/conkytime.conf &
 conky -c /home/$USER/conkyconfigs/conkysys.conf &
-#cool-retro-term -T "Terminal-1" &
 fluxbox
