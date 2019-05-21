@@ -1,5 +1,9 @@
 #!/bin/bash
 
+sudo xbps-install void-repo-nonfree
+sudo xbps-install void-repo-multilib
+sudo xbps-install void-repo-multilib-nonfree
+
 #Update the install
 sudo xbps-install -Su
 
