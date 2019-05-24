@@ -21,11 +21,13 @@
       [exec] (firefox) {firefox}
       [exec] (Links-X11) {links -g}
       [exec] (Rox-Filer) {rox}
+      [exec] (XFE) {xfe}
       [exec] (Xarchiver) {xarchiver}
       [exec] (Thinglaunch) {thinglaunch}
       [exec] (Blueman) {blueman-manager}
       [exec] (Leafpad) {leafpad}
       [exec] (Viewnior) {viewnior}
+      [exec] (WPA_GUI) {wpa_gui}
       [exec] (Xpdf) (xpdf)
 [submenu] (Fluxbox menu)
       [config] (Configure)
