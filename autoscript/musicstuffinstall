@@ -1,0 +1,1 @@
+xbps-install -S qjackctl subversion make autoconf gcc libsndfile-devel automake libtool jack-devel qt5-devel cmake libsamplerate-devel alsa-lib-devel ladspa-sdk qt5-tools-devel qt5-svg-devel libsndfile-devel pkg-config fluidsynth-devel lilv-devel lv2 libglib-devel unzip gobject-introspection glib-devel
