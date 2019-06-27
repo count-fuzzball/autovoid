@@ -1,0 +1,59 @@
+on init
+declare $startnote
+declare $startnotevelocity
+declare $startnoteid
+declare $endnote
+declare $nextnote
+declare $distance
+declare $keyswnote
+declare $keynote
+declare $newnote
+end on
+
+on note
+$startnote := $EVENT_NOTE
+$startnotevelocity := $EVENT_VELOCITY
+$startnoteid := $EVENT_ID
+{note_off($newnote)}
+ignore_event
+
+$distance := $startnote - $nextnote {what is the semitone length between the curent (start) note and the last note(called nextnote).}
+
+if ($distance = 0) {i.e the current note is the same as the last one. Do nothing and play the default sustain.}
+$newnote := play_note($EVENT_NOTE, $EVENT_VELOCITY, -1, -2)
+gig_set_dim_zone($newnote, $GIG_DIM_SMARTMIDI, 15)
+
+else
+
+
+ if ( $distance >= 13 .or. $distance <= -13) {The max sampled legato is either -12 - down or +12 up. anything else we'll ignore and just play the default sustain.}
+   message ("Out of Bounds! " & $distance)
+
+$newnote := play_note($EVENT_NOTE, $EVENT_VELOCITY, -1, -2)
+gig_set_dim_zone($newnote, $GIG_DIM_SMARTMIDI, 15)
+    else
+{   message ("Distance is " & $distance)}
+ 	if ($distance-1 < 0 ) {we're going downwards}
+	$distance := $nextnote - $startnote {The original could've been starting note 50 minus nextnote 45, so we got a negative number. flip it around so it's positive.}
+	message("move distance minus 1 is: " & $distance-1)
+	$newnote := play_note($EVENT_NOTE+48, $EVENT_VELOCITY, -1, -2)
+	gig_set_dim_zone($newnote, $GIG_DIM_SMARTMIDI, $distance-1)
+        else {otherwise, we're going up}
+	message("going up")
+	$newnote := play_note($EVENT_NOTE, $EVENT_VELOCITY, -1, -2)
+	gig_set_dim_zone($newnote, $GIG_DIM_SMARTMIDI, $distance-1) {Use distance - 1 because giga dimensions counts from 0}
+        end if
+     end if
+
+
+end if
+
+message("played " & $EVENT_NOTE & " at " & $EVENT_VELOCITY)
+$nextnote := $startnote
+
+end on
+
+on release
+note_off($newnote)
+note_off($startnoteid)
+end on
